@@ -3,17 +3,13 @@ import React from 'react';
 class Light extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      image:'/static/red-green.jpg',
-      text:'You can go in!'
-    };
 }
+
   render() {
     return (
         <div className="light">
-          <img className="image" src={this.state.image}/>
-          <p className="light-text">{this.state.text}</p>
+          <img className="image" src={this.props.image}/>
+          <p className="light-text">{this.props.text}</p>
           <style jsx>{`
                 .image {
                     width:50%;
@@ -35,6 +31,11 @@ class Light extends React.Component {
     );
   }
 }
+
+Light.propTypes = {
+  image: React.PropTypes.string.isRequired,
+  text: React.PropTypes.string.isRequired,
+};
 
 
 export default Light;

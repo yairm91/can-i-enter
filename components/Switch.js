@@ -14,6 +14,7 @@ class Switch extends React.Component {
   handleSubmit(){
     this.setState({image: this.state.buttonState === 'on' ? '/static/off-switch.jpg' : '/static/on-switch.jpg',
                     buttonState: this.state.buttonState === 'on' ? 'off' : 'on'});
+    this.props.handleChange();
   }
 
   render() {
@@ -35,6 +36,10 @@ class Switch extends React.Component {
     );
   }
 }
+
+Switch.propTypes = {
+  handleChange: React.PropTypes.func.isRequired,
+};
 
 
 export default Switch;

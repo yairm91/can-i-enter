@@ -15,8 +15,7 @@ class Index extends React.Component {
   }
 
   handleChange(){
-    console.log(this.state.lightImage === '/static/red-green.jpg');
-    this.setState({lightIamge: this.state.lightImage === '/static/red-green.jpg' ? '/static/red-light.jpg' : '/static/red-green.jpg',
+    this.setState({lightImage: this.state.lightImage === '/static/red-green.jpg' ? '/static/red-light.jpg' : '/static/red-green.jpg',
                     lightText: this.state.lightText === 'You Can go In!' ? "Wait! Don't go in yet" : 'You Can go In!'});
   }
   render() {

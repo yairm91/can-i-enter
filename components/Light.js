@@ -21,7 +21,6 @@ class Light extends React.Component {
                 .light-text {
                     font-size: 40px;
                     z-index: 1;
-                    top: -120px;
                     position: relative;
                     color: blue;
                     text-align: center;

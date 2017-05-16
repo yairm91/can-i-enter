@@ -8,14 +8,14 @@ class Index extends React.Component {
       super(props);
 
       this.state = {
-        lightImage:'/static/red-green.jpg',
+        lightImage:'green',
         lightText:'You Can go In!'
       };
       this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(){
-    this.setState({lightImage: this.state.lightImage === '/static/red-green.jpg' ? '/static/red-light.jpg' : '/static/red-green.jpg',
+    this.setState({lightImage: this.state.lightImage === 'green' ? 'red' : 'green',
                     lightText: this.state.lightText === 'You Can go In!' ? "Wait! Don't go in yet" : 'You Can go In!'});
   }
   render() {
@@ -32,7 +32,11 @@ class Index extends React.Component {
         `}</style>
     <style global jsx>{`
           body {
-            background: #FFFAFA;
+          width:100%;
+          color:#bababa;
+          background:url(http://subtlepatterns.com/patterns/bo_play_pattern.png) repeat;
+          font-family: "helvetica",sans-serif;
+          box-shadow:inset 0 0 200px black;
           }
         `}</style>
     </div>
